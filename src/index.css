@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", "Georgia", serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* Haus of Sol Artistry brand palette — warm, sunlit, handmade */
+  --color-sol-50: #fdf7ee;
+  --color-sol-100: #faecd4;
+  --color-sol-200: #f3d5a4;
+  --color-sol-300: #ecb96e;
+  --color-sol-400: #e59f42;
+  --color-sol-500: #dd8526;
+  --color-sol-600: #c2691c;
+  --color-sol-700: #9d4f1a;
+  --color-sol-800: #7f401c;
+  --color-sol-900: #69361b;
+
+  --color-clay-50: #fbf3ee;
+  --color-clay-100: #f3e0d2;
+  --color-clay-200: #e5bda3;
+  --color-clay-300: #d3986f;
+  --color-clay-400: #c17a4e;
+  --color-clay-500: #af6238;
+  --color-clay-600: #8f4d2c;
+  --color-clay-700: #723d25;
+  --color-clay-800: #5c3220;
+  --color-clay-900: #3f2317;
+
+  --color-sage-50: #f4f6ee;
+  --color-sage-100: #e4e9d4;
+  --color-sage-200: #cbd6ac;
+  --color-sage-300: #adbf80;
+  --color-sage-400: #93a862;
+  --color-sage-500: #778c49;
+  --color-sage-600: #5e6f39;
+  --color-sage-700: #4a5730;
+  --color-sage-800: #3d472b;
+  --color-sage-900: #333c26;
+
+  --color-ink-50: #faf8f5;
+  --color-ink-100: #f0ebe3;
+  --color-ink-200: #ddd2c3;
+  --color-ink-300: #beac93;
+  --color-ink-400: #9c876a;
+  --color-ink-500: #7d6a52;
+  --color-ink-600: #635342;
+  --color-ink-700: #4d4136;
+  --color-ink-800: #3a3129;
+  --color-ink-900: #241e19;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-sol-50);
+    color: var(--color-ink-900);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .texture-paper {
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(105, 54, 27, 0.06) 1px, transparent 0);
+    background-size: 18px 18px;
+  }
+}
+
+@media print {
+  nav, footer, .no-print {
+    display: none !important;
+  }
+  body {
+    background: white;
+  }
+}
